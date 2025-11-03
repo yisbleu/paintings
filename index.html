@@ -10,7 +10,7 @@
   <header>
     <h1>Your Art Studio</h1>
     <nav>
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
@@ -20,9 +20,9 @@
 
   <main>
     <section class="hero">
-      <h2>Original Paintings for the Modern Collector</h2>
-      <p>Explore my collection of expressive works — each piece tells its own story.</p>
-      <a href="gallery.html" class="btn">View Gallery</a>
+      <img src="IMG_0006.jpeg" alt="Featured Painting" id="hero-img" />
+      <h2>Welcome to My Art Studio</h2>
+      <p>Explore original paintings inspired by emotion, color, and form.</p>
     </section>
   </main>
 
@@ -31,6 +31,12 @@
   </footer>
 
   <script src="theme.js"></script>
+  <script>
+    // Smooth fade-in for hero image
+    window.addEventListener("load", () => {
+      document.getElementById("hero-img").classList.add("loaded");
+    });
+  </script>
 </body>
 </html>
 
