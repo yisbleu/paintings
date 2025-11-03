@@ -3,26 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Image Display</title>
+  <title>IMG_0006 Display</title>
   <style>
+    :root {
+      --bg-color: #1b1b1b;
+      --card-color: #2a2a2a;
+      --text-color: #ffffff;
+      --accent-color: #ffffff33;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      background-color: #fafafa;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      overflow: hidden;
     }
-    img {
+
+    .container {
+      text-align: center;
+      background-color: var(--card-color);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
       max-width: 90%;
-      max-height: 90vh;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      animation: fadeInUp 1.2s ease both;
+    }
+
+    img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--accent-color);
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    h1 {
+      margin-top: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 1rem;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <img src="https://raw.githubusercontent.com/yisbleu/paintings/main/IMG_0006.jpeg" alt="Displayed Image">
+  <div class="container">
+    <img src="/IMG_0006.jpeg" alt="Artwork Image">
+    <h1>IMG_0006</h1>
+  </div>
+  <footer>© 2025 Your Name — All rights reserved.</footer>
 </body>
 </html>
+
