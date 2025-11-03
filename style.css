@@ -1,0 +1,80 @@
+:root {
+  --bg: #f5f5f5;
+  --text: #222;
+  --card: #ffffff;
+  --accent: #0077ff;
+}
+
+body.dark {
+  --bg: #1b1b1b;
+  --text: #f5f5f5;
+  --card: #2a2a2a;
+  --accent: #66aaff;
+}
+
+* {
+  box-sizing: border-box;
+  transition: background 0.3s, color 0.3s;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--card);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: var(--text);
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+}
